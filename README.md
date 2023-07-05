@@ -34,11 +34,13 @@ All source codes are released under a BSD License
 
 ## Citation
 ```
-@article{an2023adaptively,
+@article{An2023,
   title={Adaptively weighted discrete Laplacian for inverse rendering},
   author={An, Hyeonjang and Lee, Wonjun and Moon, Bochang},
   journal={The Visual Computer},
   year={2023},
-  publisher={Springer}
+  issn={1432-2315},
+  doi={10.1007/s00371-023-02955-2},
+  url={https://doi.org/10.1007/s00371-023-02955-2}
 }
 ```
