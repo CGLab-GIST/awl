@@ -13,7 +13,7 @@ conda activate awl
 ```
 
 ## Usage
-In order to test using the provied codes, just replace the existing Laplacian in the framework [LSIG](https://github.com/rgl-epfl/large-steps-pytorch), [CRIR](https://github.com/Profactor/continuous-remeshing).
+In order to test using the provied codes, just replace the existing Laplacian in the framework [Large Steps in Inverse Rendering of Geometry](https://github.com/rgl-epfl/large-steps-pytorch), and [Continuous Remeshing For Inverse Rendering](https://github.com/Profactor/continuous-remeshing).
 
 ## Example code
 
@@ -23,8 +23,8 @@ L_c = laplacian_cotangent(mesh.verts, mesh.faces)                   # cotangent 
 L_a = laplacian_adaptive(mesh.verts, mesh.faces, LAMBDA, SCALE)     # adaptively weighted Laplacian
 ```
 
-Here, LAMBDA, $\lambda$ is a smoothing factor of Laplacian smoothing and SCALE is global scaling parameter for the different domain.
-We add the framework-specific parameter SCALE each as in the paper. For example, SCALE is set as 0.1 in LSIG.
+Here, LAMBDA, $\lambda$ is the smoothing factor of Laplacian smoothing and SCALE is global scaling parameter for different domains.
+We add the a framework-specific parameter SCALE. For example, SCALE is set as 0.1 in LSIG.
 
 ## License
 All source codes are released under a BSD License
