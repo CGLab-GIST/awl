@@ -13,7 +13,7 @@ conda activate awl
 ```
 
 ## Usage
-In order to test using the provied codes, just replace the existing Laplacian in the framework [Large Steps in Inverse Rendering of Geometry](https://github.com/rgl-epfl/large-steps-pytorch), and [Continuous Remeshing For Inverse Rendering](https://github.com/Profactor/continuous-remeshing).
+We have tested our discrete Laplacian in existing differentiable rendering frameworks, [Large Steps in Inverse Rendering of Geometry](https://github.com/rgl-epfl/large-steps-pytorch), and [Continuous Remeshing For Inverse Rendering](https://github.com/Profactor/continuous-remeshing). Please replace the existing Laplacian in the frameworks with ours for the test.
 
 ## Example code
 
@@ -38,7 +38,6 @@ All source codes are released under a BSD License
   title={Adaptively weighted discrete Laplacian for inverse rendering},
   author={An, Hyeonjang and Lee, Wonjun and Moon, Bochang},
   journal={The Visual Computer},
-  pages={1--10},
   year={2023},
   publisher={Springer}
 }
