@@ -1,23 +1,42 @@
-# Adaptively weighted discrete Laplacian
-@@todo more writing here
+# [Adaptively weighted discrete Laplacian for inverse rendering](https://cglab.gist.ac.kr/visualcomputer23direct/)
+[Hyeonjang An](https://github.com/hyeonjang), [Wonjun Lee](https://cglab.gist.ac.kr/people/), [Bochang Moon](https://cglab.gist.ac.kr/people/bochang.html)
 
-## Implementation
-1. Official implementation of ""
-2. based on pytorch framework, inspried idea from "Continuos Remehing for Inverse Rendering" and "Geometry-central"
+## Overview
+This code is the official implementation of The Visual Computer paper, [Adaptively weighted discrete Laplacian for inverse rendering](https://cglab.gist.ac.kr/visualcomputer23direct/).
+For the further informations, please refer to the project page. 
 
-## Role
-
-## Usage
-```python
-from lap import laplacian_cot, laplacian_mis
-
-    L_cotangent = laplacian_cot(mesh.verts, mesh.faces)
-    L_mix = laplacian_mis(mesh.verts, mesh.faces, LAMBDA, [LAMBDA_SCALE_MIN, LAMBDA_SCALE_MAX])
+## Requirements
+We recommend running the code under conda environment.
+```bash
+conda create -f environment.yml
+conda activate awl
 ```
 
-Here, LAMBDA, $\lambda$ is a scalar diffusion coefficient, smoothing factor for 
-$$ f^{n+1} = (I+\lambda L_{mix})^{step} \cdot f^{n}$$
+## Usage
+In order to test using the provied codes, just replace the existing Laplacian in the framework [LSIG](https://github.com/rgl-epfl/large-steps-pytorch), [CRIR](https://github.com/Profactor/continuous-remeshing).
 
-and LAMBDA_SCALE_MIN and MAX is a scale factor for the specific integration method and diffusion step(forward or backward)
+## Example code
 
+```python
+from lap import laplacian_cotangent, laplacian_adaptive
+L_c = laplacian_cotangent(mesh.verts, mesh.faces)                   # cotangent Laplacian
+L_a = laplacian_adaptive(mesh.verts, mesh.faces, LAMBDA, SCALE)     # adaptively weighted Laplacian
+```
 
+Here, LAMBDA, $\lambda$ is a smoothing factor of Laplacian smoothing and SCALE is global scaling parameter for the different domain.
+We add the framework-specific parameter SCALE each as in the paper. For example, SCALE is set as 0.1 in LSIG.
+
+## License
+All source codes are released under a BSD License
+
+## Citation
+```
+@article{an2023adaptively,
+  title={Adaptively weighted discrete Laplacian for inverse rendering},
+  author={An, Hyeonjang and Lee, Wonjun and Moon, Bochang},
+  journal={The Visual Computer},
+  pages={1--10},
+  year={2023},
+  publisher={Springer}
+}
+```
