@@ -1,4 +1,4 @@
-# [Adaptively weighted discrete Laplacian for inverse rendering](https://cglab.gist.ac.kr/visualcomputer23direct/)
+# [Adaptively weighted discrete Laplacian for inverse rendering](https://cglab.gist.ac.kr/visualcomputer23awl/)
 [Hyeonjang An](https://github.com/hyeonjang), [Wonjun Lee](https://cglab.gist.ac.kr/people/), [Bochang Moon](https://cglab.gist.ac.kr/people/bochang.html)
 
 ## Overview
